@@ -10,8 +10,8 @@ public class AvroToParquetToCassandra {
         SparkConf conf = new SparkConf().setAppName("AvroToParquetToCassandra").setMaster("local[]");
 
         // Set AWS credentials directly in the code (not recommended for security reasons)
-        conf.set("spark.hadoop.fs.s3a.access.key", "AKIATG3UFWTEYFSIDVJZ");
-        conf.set("spark.hadoop.fs.s3a.secret.key", "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");
+        //conf.set("access.key", "");
+        //conf.set("secret.key", "");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
         SparkSession spark = SparkSession.builder().appName("AvroToParquetToCassandra").getOrCreate();
